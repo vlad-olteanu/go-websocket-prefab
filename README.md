@@ -1,5 +1,5 @@
 # Go WebSocket Prefab
-A ready to deploy wrapper for the Gorrila WebSocket library
+A ready to deploy wrapper for the Gorilla WebSocket library
 
 ## Installation
 ```shell
