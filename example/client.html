@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ws client</title>
+</head>
+<body>
+<input id="text-input" type="text">
+<button id="send-button">Send</button>
+</body>
+<script>
+    let wss = new WebSocket("ws://localhost:8080/wstest")
+    wss.onopen=()=>{
+        console.log("Websocket opened")
+    }
+    document.getElementById("send-button").addEventListener("click", () => {
+        wss.send(JSON.stringify({
+            text: document.getElementById("text-input").value
+        }))
+    })
+    wss.onmessage = (message) => {
+        const msg = JSON.parse(message.data)
+        alert(msg.text)
+    }
+</script>
+</html>
