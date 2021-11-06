@@ -1,4 +1,4 @@
-module wsprefab
+module github.com/vlad-olteanu/go-websocket-prefab
 
 go 1.17
 

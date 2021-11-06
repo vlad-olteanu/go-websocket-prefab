@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	wsprefab "github.com/vlad-olteanu/go-websocket-prefab"
 	"log"
 	"net/http"
-	"wsprefab"
 )
 func onOpen(c *wsprefab.Client) {
 	fmt.Println("Connection opened")
