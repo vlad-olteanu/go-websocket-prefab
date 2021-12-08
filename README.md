@@ -12,9 +12,9 @@ import (
     wsprefab "github.com/vlad-olteanu/go-websocket-prefab"
 )
 
-func onOpen(c *wsprefab.Client) {...}
-func onMessage(c *wsprefab.Client, message []byte) {...}
-func onClose(c *wsprefab.Client) {...}
+func onOpen(c *wsprefab.Client) { }
+func onMessage(c *wsprefab.Client, message []byte) { }
+func onClose(c *wsprefab.Client) { }
 func main() {
 	wsprefab.NewWebsocketServer("/wstest",
 		onOpen, //optional, you can use nil instead
